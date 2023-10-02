@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo  displays</title>
+    <style>
+        
+
+body{
+    background-color: cadetblue;
+}
+.displayBlock{
+    display: block;
+}
+
+
+p{
+    background-color: rgb(19, 216, 134);
+}
+
+.display-in-line p{
+
+    display: inline;
+    margin: 38px;
+}
+
+.display-in-Block{
+    margin: 200px;
+    display: inline-block;
+}
+
+.displayFlex{
+    display: flex;
+    margin: 120px;
+}
+
+
+            
+    </style>
+</head>
+<body>
+    <div class="displayBlock">
+        <p>Paragrafo 1</p>
+        <p>Paragrafo 2</p>
+        <p>Paragrafo 3</p>
+    </div>
+    <hr>
+    <div class="display-in-line">
+        <p>Paragrafo 1</p>
+        <p>Paragrafo 2</p>
+        <p>Paragrafo 3</p>
+    </div>
+    <div class="display-in-Block">
+        <p>Paragrafo 1</p>
+        <p>Paragrafo 2</p>
+        <p>Paragrafo 3</p>
+    </div>
+    <div class="displayFlex">
+        <p>Paragrafo 1</p>
+        <p>Paragrafo 2</p>
+        <p>Paragrafo 3</p>
+    </div>
+</body>
+
+</html>
