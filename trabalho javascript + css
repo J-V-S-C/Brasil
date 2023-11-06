@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar se um número é primo</title>
+</head>
+<body>
+    <h1>Verificar se um número é primo</h1>
+    <p>Insira um número inteiro positivo:</p>
+    <input type="number" id="numberInput">
+    <button onclick="checkPrime()">Verificar</button>
+    <p id="result"></p>
+
+    <script>
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            }
+            if (number <= 3) {
+                return true;
+            }
+            if (number % 2 === 0 || number % 3 === 0) {
+                return false;
+            }
+            for (let i = 5; i * i <= number; i += 6) {
+                if (number % i === 0 || number % (i + 2) === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function checkPrime() {
+            const numberInput = document.getElementById('numberInput');
+            const result = document.getElementById('result');
+            const number = parseInt(numberInput.value);
+
+            if (isNaN(number) || number < 2) {
+                result.textContent = 'Por favor, insira um número inteiro positivo maior que 1.';
+            } else if (isPrime(number)) {
+                result.textContent = `${number} é um número primo.`;
+            } else {
+                result.textContent = `${number} não é um número primo.`;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Peso em Planetas</title>
+    <script>
+        function calcularPesoNoPlaneta() {
+    const pesoNaTerra = parseFloat(document.getElementById('pesoNaTerra').value);
+    const planetaEscolhido = document.getElementById('planetaEscolhido').value;
+    let gravidadeNoPlaneta = 0;
+    
+    switch (planetaEscolhido) {
+        case '1':
+            gravidadeNoPlaneta = 0.37; // Mercúrio
+            break;
+        case '2':
+            gravidadeNoPlaneta = 0.88; // Vênus
+            break;
+        case '3':
+            gravidadeNoPlaneta = 0.38; // Marte
+            break;
+        case '4':
+            gravidadeNoPlaneta = 2.64; // Júpiter
+            break;
+        case '5':
+            gravidadeNoPlaneta = 1.15; // Saturno
+            break;
+        case '6':
+            gravidadeNoPlaneta = 1.17; // Urano
+            break;
+    }
+
+    if (!isNaN(pesoNaTerra) && gravidadeNoPlaneta !== 0) {
+        const pesoNoPlaneta = (pesoNaTerra / 10) * gravidadeNoPlaneta;
+        document.getElementById('resultado').textContent = `Seu peso em ${obterNomePlaneta(planetaEscolhido)} é: ${pesoNoPlaneta.toFixed(2)} kg`;
+    } else {
+        document.getElementById('resultado').textContent = 'Por favor, insira um peso válido e selecione um planeta.';
+    }
+}
+
+function obterNomePlaneta(planeta) {
+    switch (planeta) {
+        case '1':
+            return 'Mercúrio';
+        case '2':
+            return 'Vênus';
+        case '3':
+            return 'Marte';
+        case '4':
+            return 'Júpiter';
+        case '5':
+            return 'Saturno';
+        case '6':
+            return 'Urano';
+        default:
+            return '';
+    }
+}
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Peso em Planetas</h1>
+    <p>Insira seu peso na Terra (em kg):</p>
+    <input type="number" id="pesoNaTerra">
+    <p>Escolha um planeta:</p>
+    <select id="planetaEscolhido">
+        <option value="1">Mercúrio</option>
+        <option value="2">Vênus</option>
+        <option value="3">Marte</option>
+        <option value="4">Júpiter</option>
+        <option value="5">Saturno</option>
+        <option value="6">Urano</option>
+    </select>
+    <button onclick="calcularPesoNoPlaneta()">Calcular Peso</button>
+    <p id="resultado"></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Conta de Restaurante</title>
+    <script>
+        function calcularConta() 
+        {
+            const nomeCliente = document.getElementById('nomeCliente').value;
+            const pesoPrato = parseFloat(document.getElementById('pesoPrato').value);
+            const quantidadeBebidas = parseInt(document.getElementById('quantidadeBebidas').value);
+
+            if (!nomeCliente || isNaN(pesoPrato) || isNaN(quantidadeBebidas)) {
+                alert('Por favor, preencha todos os campos corretamente.');
+                return;
+            }
+
+            const precoQuilo = 20.00;
+            const precoBebida = 4.00;
+            const valorRefeicao = pesoPrato * precoQuilo;
+            const valorBebidas = quantidadeBebidas * precoBebida;
+            const valorTotal = valorRefeicao + valorBebidas;
+
+            const notaFiscal = `
+            ----- Nota Fiscal -----
+            Cliente: ${nomeCliente}
+            Peso do Prato (kg): ${pesoPrato}
+            Valor da Refeição: R$ ${valorRefeicao.toFixed(2)}
+            Quantidade de Bebidas: ${quantidadeBebidas}
+            Valor das Bebidas: R$ ${valorBebidas.toFixed(2)}
+            Valor Total: R$ ${valorTotal.toFixed(2)}
+            ------------------------
+            `;
+
+            document.getElementById('notaFiscal').textContent = notaFiscal;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Conta de Restaurante</h1>
+    <p>Nome do Cliente:</p>
+    <input type="text" id="nomeCliente">
+    <p>Peso do Prato (em kg):</p>
+    <input type="number" id="pesoPrato">
+    <p>Quantidade de Bebidas:</p>
+    <input type="number" id="quantidadeBebidas">
+    <button onclick="calcularConta()">Calcular Conta</button>
+    <div id="notaFiscal"></div>
+
+
+</body>
+</html>
