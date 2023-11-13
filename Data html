@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <script>
+        var data = Date();
+        document.write(data);
+        document.write('<hr>');
+        var dataNova = new Date(data);
+        document.write(dataNova.getDate());
+        document.write('<hr>');
+        document.write(dataNova.getMonth()+1);
+        document.write('<hr>');
+        document.write(dataNova.getFullYear());
+        document.write('<hr>');
+        document.write(dataNova.getHours());
+        document.write('<hr>');
+        document.write(dataNova.getMinutes());
+        document.write('<hr>');
+        document.write(dataNova.setSeconds());
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
