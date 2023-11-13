@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senha</title>
+    <script>
+        if(nome || text || senhaconf == 0)
+        document.write('Todos os campos devem ser preenchidos');
+    </script>
+</head>
+<body>
+    <form name=”form1” method=”post” action=””>
+        Nome:<input name=”nome” type=”text” id=”nome” size=”20”> <br>
+        Senha:<input name=”senha” type=”text” id=”senha” size=”20”><br>
+        Confirma senha: <input name=”senhaconf” type=”text” id=”senhaconf” size=”20”>
+       <br>
+       <input name=”Enviar” type=”button” id=”Enviar” value=”Enviar”>
+       </form>
+</body>
+</html>
