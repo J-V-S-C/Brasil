@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        p{
+            color: rgb(14, 22, 15);
+        }
+    </style>
+    <script>
+        var frutas = new Array(4);
+        frutas[0]="maça";
+        frutas[1]="laranja";
+        frutas[2]="abacaxi";
+        frutas[3]="limão";
+
+        frutas.sort();
+        for(var i=0; i<frutas.length; i++)
+        {
+            //document.write = printf
+            document.write ('<p>' + frutas[i] + '</p>');
+        }
+        document.write('<hr>');
+
+        var nomes = new Array('Maria', 'João', 'Alexandre')
+        nomes.sort();
+        nomes.reverse();
+        var i=0;
+        while( i < nomes.length)
+        {
+            document.write ('<p>' + nomes[i] + '</p>');
+            i++;
+        }
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
