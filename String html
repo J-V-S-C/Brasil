@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING</title> 
+
+    <style>
+    </style>
+
+    <script>
+        var Palavra = new String('Olá mundo!');
+        document.write(Palavra[0]);
+        document.write(Palavra.charAt(2));
+        document.write('<hr>');
+        var data = new String('13/11/2023');
+        var dia_mes_ano = data.split('/');
+        var dia = dia_mes_ano[0];
+        var mes = dia_mes_ano[1];
+        var ano = dia_mes_ano[2]
+        document.write('Hoje é dia ' + dia + ' do mês ' + mes + ' do ano ' + ano);
+        document.write('<hr>');
+        var contato = new String('Nome: Maria; Email: Maria@gmail.com;');
+        var Email = contato.substring(19, 35);
+        document.write(Email);
+        document.write('<p>' + Email.toLocaleUpperCase() + '</p>')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
