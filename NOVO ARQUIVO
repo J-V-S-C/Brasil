@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+</head>
+<body>
+    <!-- comentário -->
+    <form method="post" action="formulario.php">
+    <label>Nome:</label>
+        <input type="text" name="nome" placeholder="Informe seu nome">
+        </br>
+        <label>E-mail:</label>
+        <input type="text" name="email" placeholder="Informe seu e-mail">
+</br>
+<label>Sexo:</label>
+        <input type="radio" name="sexo" value="Feminino">Feminino
+        <input type="radio" name="sexo" value="Masculino">Masculino
+</br>
+<label>Estado Civil:</label>
+<select name="opcao">
+    <option value="Solteiro(a)">Solteiro(a) </option> 
+    <option value="Casado(a)">Casado(a) </option> 
+    <option value="União estável">União estável </option> 
+    <option value="Divorciado(a)">Divorciado(a) </option> 
+</select>
+
+</br>
+        <input type="submit" value="Enviar dados">
+</br>
+        <?php
+            if($_POST){
+
+                $nome = $_POST['nome']; 
+                echo 'Seu nome é: '.$nome;
+                echo '<br>';
+                           
+
+
+                $email = $_POST['email']; 
+                echo 'Seu e-mail é: '.$email;
+                echo '<br>';
+                
+                $sexo = $_POST['sexo']; 
+                echo 'Seu sexo é: '.$sexo;
+                echo '<br>';
+
+                $opcao = $_POST['opcao']; 
+                echo 'Seu Estado-Civil é: '.$opcao;
+                echo '<br>';
+              }
+          ?>
+      </form>
+  </body>
+  </html>
