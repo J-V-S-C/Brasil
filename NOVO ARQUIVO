@@ -54,3 +54,157 @@
       </form>
   </body>
   </html>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+</head>
+<body>
+    <!-- comentário -->
+    <form method="post" action="Ex2.php">
+        <label>Valor 1:</label>
+        <input type="number" name="v1" value="v1" >
+</br>              
+        <label>Valor 2:</label>
+        <input type="number" name="v2" value="v2" >
+</br>
+
+<label>Operação:</label>
+        <input type="radio" name="op" value="A">Adição
+        <input type="radio" name="op" value="S">Subtração
+        <input type="radio" name="op" value="M">Multiplicação
+        <input type="radio" name="op" value="D">Divisão
+</br>
+
+        <input type="submit" value="Calcular">
+</br>
+
+      </form>
+      <?php
+  if($_POST){
+
+    $v1 = $_POST['v1']; 
+    $v2 = $_POST['v2']; 
+
+
+    if($_POST['op'] == 'A')
+    {
+        $r=$v1+$v2;
+    }
+    else if($_POST['op'] == 'S')
+    {
+        $r=$v1-$v2;
+    }
+    else if($_POST['op'] == 'M')
+    {
+        $r=$v1*$v2;
+    }
+    else if($_POST['op'] == 'D')
+    {
+        $r=$v1/$v2;
+    }
+ 
+               
+
+
+echo'O Resultado é:'.$r;
+  }
+           
+          ?>
+          </br>
+                <a href="Ex3.php">Ex3</a>
+  </body>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+</head>
+<body>
+    <!-- comentário -->
+    <form method="post" action="Ex3.php">
+        <label>Nota prova 1:</label>
+        <input type="number" name="n1" value="v1" >
+</br>              
+<label>Nota prova 2:</label>
+        <input type="number" name="n2" value="v1" >
+</br>      
+<label>Nota prova 3:</label>
+        <input type="number" name="n3" value="v1" >
+</br>      
+
+<label>Cargo:</label>
+
+<select name="cargo">
+    <option value="Gerente">Gerente </option> 
+    <option value="Diretor">Diretor </option> 
+</select>  
+
+        <input type="submit" value="Verificar">
+</br>
+
+      </form>
+      <?php
+  if($_POST){
+    $n1=$_POST['n1'];
+    $n2=$_POST['n2'];
+    $n3=$_POST['n3'];
+    $cargo=$_POST['cargo'];
+
+    $m=($n1*3)+($n2*3)+($n3*4);
+    $m=$m/10;
+    if($m<7 && $_POST['cargo']=='Gerente')
+    {
+        echo'REPROVADO';
+    }
+    else  if($m>=7 && $_POST['cargo']=='Gerente')
+    {
+        echo'APROVADO';
+    }
+    else  if($m<8 && $_POST['cargo']=='Diretor')
+    {
+        echo'REPROVADO';
+    }
+    else  if($m>=8 && $_POST['cargo']=='Diretor')
+    {
+        echo'APROVADO';
+    }
+ 
+  }
+           
+          ?>
+
+  </body>
+  </html>
