@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PampaCortePlus</title>
+</head>
+<body>
+    <div>
+        <label>Nome</label>
+           <input type="text" name="nome" placeholder="Insira seu nome"/>
+    </div>
+    
+    <div><input type="text" name="E-mail"/> </div>
+
+    <div>  <imput type="text" name="Tel"/> 
+    <input type="text" name="área"/>
+    <input type="radio" name="Acesso" value="A"/>Administrador
+    <input type="radio" name="Acesso" value="E"/>Estudante
+    <input type="radio" name="Acesso" value="p1"/>Produtor
+    <input type="radio" name="Acesso" value="p2"/>Professor
+    <input type="radio" name="Acesso" value="V"/>Visitante </div>
+    <div> <select  name="Estado">
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espírito Santo</option>
+    <option value="GO">Goiás</option> </select> </div>
+   
+      
+
+
+    
+</body>
+</html>
