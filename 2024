@@ -3,23 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" type="text/css" href="estilo.css">
     <title>PampaCortePlus</title>
 </head>
 <body>
+
+
     <div>
-        <label>Nome</label>
-           <input type="text" name="nome" placeholder="Insira seu nome"/>
+        <label>Nome:</label>
+           <input type="text" name="nome" placeholder="Informe seu nome"/>
+    </div>
+
+    
+    <div>
+        <label>E-mail:</label>
+        <input type="text" name="E-mail" placeholder="Informe seu E-mail"/> 
+    </div>
+
+
+    <div> 
+        <label>Telefone:</label> 
+        <input type="text" name="Tel" placeholder="Informe seu Telefone"/> 
+    </div>
+
+
+    <div> 
+        <label>Atuação:</label> 
+        <textarea name="área" cols="30" rows="3" placeholder="Informe sua área de atuação"></textarea>/>
+    </div>
+
+
+    <div>
+        <label>Selecione um tipo de acesso:</label> 
+        <input type="radio" name="Acesso" value="A"/>Administrador
+        <input type="radio" name="Acesso" value="E"/>Estudante
+        <input type="radio" name="Acesso" value="p1"/>Produtor
+        <input type="radio" name="Acesso" value="p2"/>Professor
+        <input type="radio" name="Acesso" value="T"/>Técnico
+        <input type="radio" name="Acesso" value="V"/>Visitante 
     </div>
     
-    <div><input type="text" name="E-mail"/> </div>
 
-    <div>  <imput type="text" name="Tel"/> 
-    <input type="text" name="área"/>
-    <input type="radio" name="Acesso" value="A"/>Administrador
-    <input type="radio" name="Acesso" value="E"/>Estudante
-    <input type="radio" name="Acesso" value="p1"/>Produtor
-    <input type="radio" name="Acesso" value="p2"/>Professor
-    <input type="radio" name="Acesso" value="V"/>Visitante </div>
     <div> <select  name="Estado">
     <option value="AC">Acre</option>
     <option value="AL">Alagoas</option>
@@ -34,6 +58,6 @@
       
 
 
-    
+
 </body>
 </html>
