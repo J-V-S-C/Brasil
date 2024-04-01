@@ -1,0 +1,95 @@
+INDEX.HTML
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão HTML</title>
+
+</head>
+<body>
+    <!--menu-->
+    <ul>
+        <li><a href="#">Cadastro de Produtos</a></li>
+        <li><a href="#">Cadastro de clientes</a></li>
+        <li><a href="#">Cadastro de propriedades</a></li>
+        <li><a href="#">Relatórios</a></li>
+        
+        
+
+    </ul>
+    
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Cadastroprodutos.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <form method="get" action="Controller/produtosController.php">
+        <h1>Cadastro de Produtos</h1>
+        <table>
+            <tr>
+                <td><label>Nome do produto:</label></td>
+                <td><input type="text" name="nome"></td>
+            </tr>
+            <tr>
+                <td><label>Preço de Custo:</label></td>
+                <td><input type="text" name="Precocusto"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Cadastrar produto"></td>
+            </tr>
+        </table>
+        
+
+    </form>
+
+    
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+pordutoscontroller.php
+
+<?php
+//Se vier alguma coisa de qualquer formulário via get...
+if($_GET){
+    //imprime na tela.
+    $nome = $_GET['nome'];
+    $precocusto = $_GET['Precocusto'];
+
+    echo'O produto '.$nome.' foi cadastrado com sucesso. <br>';
+    echo'O preço informado foi de '.$precocusto.' reais';
+
+}
+else{
+   // echo'Você não pode acessar essa página diretamente';
+   //Se não vier de get...redirectiona para a página cadastroprodutos.html
+    header('location:../cadastroprodutos.html');
+}
+?>
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Site 
+  controller
+      php
+  css
+  IMG
+  js
+  model
+  cadastroprodutos.html
+  index.html
+-----------------------------------------------------------------------------------------------------------------------------
