@@ -8,8 +8,8 @@ if ($_POST) {
 
 
     if ($senha == $senha2) {
-        //cadastro usuário
-        break;
+        //Cadastro o usuário
+        echo 'As senhas conferem.';
     } else {
         header('location:../cadastroclientes.php?cod=171');
     }
