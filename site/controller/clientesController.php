@@ -14,5 +14,5 @@ if ($_POST) {
         header('location:../cadastroclientes.php?cod=171');
     }
 } else {
-    header('location:../cadastroclientes.html?opa');
+    header('location:../cadastroclientes.php?opa');
 }
